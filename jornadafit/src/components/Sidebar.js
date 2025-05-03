@@ -1,54 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Sidebar.css";
 
-export default function Sidebar({ toggled, onToggle }) {
+export default function Sidebar({ state }) {
+  const isCollapsed = state === "collapsed";
+
   return (
-    <ul
-      className={`navbar-nav bg-gradient-primary sidebar sidebar-dark accordion ${
-        toggled ? "toggled" : ""
-      }`}
-      id="accordionSidebar"
-    >
-      {/* Logo/Marca */}
-      <a
-        className="sidebar-brand d-flex align-items-center justify-content-center"
-        href="/"
-      >
-        <div className="sidebar-brand-icon rotate-n-15">
-          <i className="fas fa-heartbeat"></i>
-        </div>
-        <div className="sidebar-brand-text mx-3">Kaizoo</div>
-      </a>
-
-      <hr className="sidebar-divider my-0" />
-
-      {/* Itens de menu */}
-      <li className="nav-item">
-        <Link to="/" className="nav-link">
+    <aside className={`kaizoo-sidebar ${isCollapsed ? "collapsed" : ""}`}>
+      <nav className="sidebar-nav">
+        <Link to="/" className="nav-item">
           <i className="fas fa-home"></i>
-          <span>Início</span>
+          {!isCollapsed && <span>Início</span>}
         </Link>
-      </li>
-
-      <li className="nav-item">
-        <Link to="/desafios" className="nav-link">
-          <i className="fas fa-tasks"></i>
-          <span>Desafios</span>
+        <Link to="/atividade" className="nav-item">
+          <i className="fas fa-play-circle"></i>
+          {!isCollapsed && <span>Iniciar Atividade</span>}
         </Link>
-      </li>
+        <Link to="/desafios" className="nav-item">
+          <i className="fas fa-trophy"></i>
+          {!isCollapsed && <span>Desafios</span>}
+        </Link>
+        <Link to="/progresso" className="nav-item">
+          <i className="fas fa-chart-line"></i>
+          {!isCollapsed && <span>Progresso</span>}
+        </Link>
+        <Link to="/comunidade" className="nav-item">
+          <i className="fas fa-users"></i>
+          {!isCollapsed && <span>Comunidade</span>}
+        </Link>
+        <Link to="/mascotes" className="nav-item">
+          <i className="fas fa-paw"></i>
+          {!isCollapsed && <span>Mascotes</span>}
+        </Link>
+        <Link to="/perfil" className="nav-item">
+          <i className="fas fa-user"></i>
+          {!isCollapsed && <span>Perfil</span>}
+        </Link>
+        <Link to="/configuracoes" className="nav-item">
+          <i className="fas fa-cog"></i>
+          {!isCollapsed && <span>Configurações</span>}
+        </Link>
+      </nav>
 
-      {/* Mais itens... */}
-
-      <hr className="sidebar-divider d-none d-md-block" />
-
-      {/* Botão de colapsar igual ao SB Admin */}
-      <div className="text-center d-none d-md-inline">
-        <button
-          className="rounded-circle border-0"
-          id="sidebarToggle"
-          onClick={onToggle}
-        ></button>
+      <div className="sidebar-footer">
+        <button className="logout-btn">
+          <i className="fas fa-sign-out-alt"></i>
+        </button>
       </div>
-    </ul>
+    </aside>
   );
 }

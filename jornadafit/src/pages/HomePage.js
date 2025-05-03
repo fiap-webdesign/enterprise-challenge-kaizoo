@@ -5,23 +5,63 @@ import "./HomePage.css";
 export default function HomePage() {
   return (
     <Layout>
-      <h1>Olá, usuário</h1>
+      <div className="homepage-container">
+        <h1 className="greeting">Olá, Julia!</h1>
 
-      <div className="kaizoo-section">
-        <div className="kaizoo-avatar">[Kaizoo animado]</div>
-        <div className="actions">
-          <button>Iniciar Atividade</button>
-          <button>Cuidar do seu Kaizoo</button>
-          <h1 className="h3 mb-4 text-gray-800">Dashboard</h1>
+        <div className="main-section">
+          <div className="avatar-card">
+            <img
+              src="/assets/kaizoo-cat.png"
+              alt="Kaizoo"
+              className="kaizoo-image"
+            />
+            <div className="level-info">
+              <span className="level-badge">5</span>
+              <div>
+                <strong>Nível 5</strong>
+                <p>325XP para o próximo nível!</p>
+              </div>
+            </div>
+            <div className="button-group">
+              <button className="btn btn-register">Registrar Atividade</button>
+              <button className="btn btn-dark">Compartilhar</button>
+            </div>
+          </div>
+
+          <div className="side-info">
+            <div className="card destaque">
+              <strong>Destaque do Dia</strong>
+              <p>"Hoje o seu Kaizoo quer se movimentar por 15 minutos!"</p>
+            </div>
+
+            <div className="card desafio">
+              <strong>Próximo Desafio</strong>
+              <p>Meta: 10km corridos</p>
+              <div className="progress-bar">
+                <div className="progress-fill" style={{ width: "70%" }}></div>
+              </div>
+            </div>
+
+            <div className="card atividades">
+              <strong>Minhas Atividades</strong>
+              <div className="atividade-icons">
+                <span>🏃 34min</span>
+                <span>🚶 1h30min</span>
+                <span>🚴 45min</span>
+              </div>
+            </div>
+
+            <div className="card conquistas">
+              <strong>Conquistas Recentes</strong>
+              <p>Você ganhou 2 troféus!</p>
+            </div>
+
+            <div className="card amigos">
+              <strong>Amigos Ativos Hoje</strong>
+              <div className="avatars">{/* 4 mascotes redondos */}</div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="info-section">
-        <div className="card destaque">Destaque do Dia</div>
-        <div className="card desafio">Próximo Desafio</div>
-        <div className="card atividades">Minhas Atividades</div>
-        <div className="card conquistas">Conquistas Recentes</div>
-        <div className="card amigos">Amigos ativos hoje</div>
       </div>
     </Layout>
   );
