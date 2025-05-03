@@ -1,36 +1,45 @@
-.kaizoo-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .kaizoo-avatar {
-    width: 200px;
-    height: 200px;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .info-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-  }
-  
-  .card {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
+.homepage-container {
+  background-color: #ebebeb;
+  padding: 2rem;
+}
+
+.greeting {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.kaizoo-image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.btn-register {
+  background-color: #ffd6a5;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card.destaque {
+  background-color: #ffd6a5;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 10px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+}
