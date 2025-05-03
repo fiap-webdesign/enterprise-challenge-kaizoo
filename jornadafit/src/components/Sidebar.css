@@ -16,4 +16,6 @@
     margin: 15px 0;
     cursor: pointer;
   }
-  
+  .custom-kaizoo {
+    background: linear-gradient(180deg, #6c63ff 0%, #514fc1 100%);
+  }
