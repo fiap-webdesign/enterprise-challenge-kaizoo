@@ -4,19 +4,24 @@ import Header from "./Header";
 
 export default function Layout({ children }) {
   const [isMobile, setIsMobile] = useState(false);
-  const [sidebarState, setSidebarState] = useState("full");
+  const [sidebarState, setSidebarState] = useState(() => {
+    return localStorage.getItem("sidebarState") || "full";
+  });
 
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
-      setSidebarState(mobile ? "full" : "full");
     };
 
     window.addEventListener("resize", handleResize);
     handleResize(); // define ao carregar
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("sidebarState", sidebarState);
+  }, [sidebarState]);
 
   const handleToggleSidebar = () => {
     if (isMobile) {
@@ -26,7 +31,6 @@ export default function Layout({ children }) {
     }
   };
 
-  // Define a largura conforme o estado
   const sidebarWidth =
     sidebarState === "hidden"
       ? "0px"

@@ -20,6 +20,8 @@ function App() {
         <Route path="/mascotes" element={<MascotesPage />} />
         <Route path="/perfil" element={<PerfilPage />} />
         <Route path="/configuracoes" element={<ConfiguracoesPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/atividade" element={<AtividadePage />} />
       </Routes>
     </Router>
   );
