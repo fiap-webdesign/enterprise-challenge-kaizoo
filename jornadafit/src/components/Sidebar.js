@@ -1,14 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
 export default function Sidebar({ state }) {
   const isCollapsed = state === "collapsed";
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Opcional: limpar dados do usuário
+    localStorage.removeItem("usuario");
+
+    // Redireciona para a página de login
+    navigate("/");
+  };
 
   return (
     <aside className={`kaizoo-sidebar ${isCollapsed ? "collapsed" : ""}`}>
       <nav className="sidebar-nav">
-        <Link to="/" className="nav-item">
+        <Link to="/home" className="nav-item">
           <i className="fas fa-home"></i>
           {!isCollapsed && <span>Início</span>}
         </Link>
@@ -43,7 +52,7 @@ export default function Sidebar({ state }) {
       </nav>
 
       <div className="sidebar-footer">
-        <button className="logout-btn">
+        <button className="logout-btn" onClick={handleLogout}>
           <i className="fas fa-sign-out-alt"></i>
         </button>
       </div>

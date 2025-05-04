@@ -10,6 +10,8 @@ import yogaIcon from "../img/personIcon.png";
 import outroIcon from "../img/personIcon.png";
 import successMascots from "../img/successMascots.png";
 
+import { useNavigate } from "react-router-dom";
+
 const camposPadrao = ["Data", "Duração", "Intensidade", "Nota de bom humor"];
 const opcoesEspecificas = {
   Alongamento: ["Tipo de prática", "Foco Corporal", "Ambiente"],
@@ -30,6 +32,7 @@ const icones = {
 };
 
 export default function AtividadePage() {
+  const navigate = useNavigate();
   const [atividadeSelecionada, setAtividadeSelecionada] = useState("");
   const [passoAtual, setPassoAtual] = useState(1);
   const [amigosAdicionados, setAmigosAdicionados] = useState([]);
@@ -74,7 +77,7 @@ export default function AtividadePage() {
             <div className="botoes-navegacao" style={{ marginTop: "1.5rem" }}>
               <button
                 className="btn-kaizoo-dark"
-                onClick={() => (window.location.href = "/")}
+                onClick={() => navigate("/home")}
               >
                 Página Inicial
               </button>
