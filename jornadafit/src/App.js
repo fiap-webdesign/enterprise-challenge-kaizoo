@@ -7,21 +7,81 @@ import ComunidadePage from "./pages/ComunidadePage";
 import MascotesPage from "./pages/MascotesPage";
 import PerfilPage from "./pages/PerfilPage";
 import ConfiguracoesPage from "./pages/ConfiguracoesPage";
+import AuthPage from "./pages/AuthPage";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/desafios" element={<DesafiosPage />} />
-        <Route path="/atividade" element={<AtividadePage />} />
-        <Route path="/progresso" element={<ProgressoPage />} />
-        <Route path="/comunidade" element={<ComunidadePage />} />
-        <Route path="/mascotes" element={<MascotesPage />} />
-        <Route path="/perfil" element={<PerfilPage />} />
-        <Route path="/configuracoes" element={<ConfiguracoesPage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/atividade" element={<AtividadePage />} />
+        {/* Página de Login/Cadastro */}
+        <Route path="/" element={<AuthPage />} />
+
+        {/* Rotas protegidas */}
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/desafios"
+          element={
+            <PrivateRoute>
+              <DesafiosPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/atividade"
+          element={
+            <PrivateRoute>
+              <AtividadePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/progresso"
+          element={
+            <PrivateRoute>
+              <ProgressoPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/comunidade"
+          element={
+            <PrivateRoute>
+              <ComunidadePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/mascotes"
+          element={
+            <PrivateRoute>
+              <MascotesPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/perfil"
+          element={
+            <PrivateRoute>
+              <PerfilPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/configuracoes"
+          element={
+            <PrivateRoute>
+              <ConfiguracoesPage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );
