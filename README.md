@@ -32,13 +32,13 @@ Ser o aplicativo fitness mais querido do Brasil para quem busca constância e be
 ## 🔗 Links
 
 ### 🔨 Link do layout
-
 https://www.figma.com/design/pVsIoJEYtDM3A3XYC5iQfM/KAIZOO---ENTERPRISE-CHALLENGE?node-id=0-1&t=z6ELLPtJ2qtMWfnk-1
 
 ### 🔨 Link do protótipo
-
 https://www.figma.com/proto/pVsIoJEYtDM3A3XYC5iQfM/KAIZOO---ENTERPRISE-CHALLENGE?node-id=0-1&t=WY3Ctjl1DW1HJUGo-1
 
+### 🔨 Link do Vercel
+https://enterprise-challenge-kaizoo.vercel.app/
 
 ## 🔍 Pesquisa e Desenvolvimento
 
