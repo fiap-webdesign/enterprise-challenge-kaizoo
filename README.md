@@ -143,11 +143,15 @@ Existe uma forte demanda por uma solução leve, divertida e focada em progresso
 ## 📱 Funcionalidades Principais
 
 - Cadastro e autenticação de usuário
-
-
+![image](https://github.com/user-attachments/assets/34cd4046-d6b6-4278-b603-47a4779a36ae)
+![image](https://github.com/user-attachments/assets/a04a7e5b-4ca1-447f-a7ae-a5f81eb13d60)
 
 - Registro de atividades físicas.
-	
+![image](https://github.com/user-attachments/assets/7663a6d4-cfb8-4ab3-9722-fcee884ca07f)
+![image](https://github.com/user-attachments/assets/15e1b9da-dcdd-4772-a9ca-acf78928cd5e)
+![image](https://github.com/user-attachments/assets/b0806783-cac7-4468-9a4f-26a0b8fea77e)
+![image](https://github.com/user-attachments/assets/06d3db99-3eb3-493e-b030-cddd9cca6bdb)
+
 - Criação e participação em desafios personalizados.
 - Evolução de mascotes conforme a prática.
 - Sistema de troféus e recompensas.
