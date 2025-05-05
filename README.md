@@ -160,9 +160,9 @@ Existe uma forte demanda por uma solução leve, divertida e focada em progresso
 
 ## 👥 Integrantes
 
-- Natalia Silva Guaita
-- Patricia Eihara
-- Rafael Santos
+- Natalia Silva Guaita - planejamento e design
+- Patricia Eihara - planejamento e desenvolvimento
+- Rafael Santos - planejamento e atualizações
 
 ## 🎬 Link para Apresentação
 
