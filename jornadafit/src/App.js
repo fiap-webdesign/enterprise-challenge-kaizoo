@@ -9,15 +9,16 @@ import PerfilPage from "./pages/PerfilPage";
 import ConfiguracoesPage from "./pages/ConfiguracoesPage";
 import AuthPage from "./pages/AuthPage";
 import PrivateRoute from "./components/PrivateRoute";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Página de Login/Cadastro */}
-        <Route path="/" element={<AuthPage />} />
+        <Route path="/" element={<LandingPage />} />
 
-        {/* Rotas protegidas */}
+        <Route path="/auth" element={<AuthPage />} />
+
         <Route
           path="/home"
           element={
