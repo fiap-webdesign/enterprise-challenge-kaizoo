@@ -1,0 +1,49 @@
+.evento-card {
+  background: #f4d3e0;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.evento-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+.icone-evento {
+  color: #2c2c2c;
+}
+
+.evento-card p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+}
+
+.evento-local {
+  color: #7b2d4a;
+  font-weight: 600;
+}
+
+.botao-evento {
+  margin-top: 0.5rem;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.botao-evento:hover {
+  background: #ffeef5;
+}

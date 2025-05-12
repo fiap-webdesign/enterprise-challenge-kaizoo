@@ -1,0 +1,4 @@
+/* Aplica Poppins em todos os elementos, exceto os ícones de Font Awesome */
+body, body *:not(i):not(.fas):not(.fa):not([class^="fa"]) {
+  font-family: 'Poppins', sans-serif !important;
+}

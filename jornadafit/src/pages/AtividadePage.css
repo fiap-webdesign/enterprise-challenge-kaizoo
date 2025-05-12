@@ -1,0 +1,299 @@
+.atividade-container {
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  .atividade-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 1rem;
+  }
+  
+  .steps {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .step {
+    padding: 0.4rem 1.2rem;
+    border-radius: 12px;
+    background: #ebebeb;
+    font-weight: 600;
+    color: #1e1e1e;
+  }
+  
+  .step.active {
+    background: #1e1e1e;
+    color: white;
+  }
+  
+  .arrow {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .atividade-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .atividade-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .atividade-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #1e1e1e;
+  }
+  
+  .atividade-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .atividade-btn {
+    background: #ffd6a5;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .kaizoo-box {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .kaizoo-img {
+    width: 100%;
+    border-radius: 16px;
+    max-width: 350px;
+  }
+  
+  .nivel-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .nivel-circle {
+    background: #ffd6a5;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e1e1e;
+  }
+  .atividade-kaizoo-card {
+    width: 346px;
+    height: 500px;
+  }
+  .atividade-container {
+    padding: 2rem;
+  }
+  
+  .titulo {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .passos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .passo.ativo {
+    background: #1e1e1e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+  }
+  
+  .passo {
+    color: #1e1e1e;
+  }
+  
+  .seta {
+    font-size: 1.5rem;
+    color: #999;
+  }
+  
+  .atividade-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px #ddd;
+    max-width: 640px;
+  }
+  
+  .atividade-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .botao-atividade {
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    background: #ffd6a5;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .botao-atividade.selecionado {
+    background: #f4b26d;
+  }
+  
+  .grupo-campos {
+    margin-top: 1.5rem;
+  }
+  
+  .campos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+  .campo-input {
+    background: #efefef;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .passo {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: #ccc;
+    font-weight: 600;
+  }
+  
+  .passo.ativo {
+    background: #ffd6a5;
+    color: #1e1e1e;
+  }
+  .botoes-navegacao {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .btn-kaizoo-dark {
+    background: #1e1e1e;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-kaizoo-dark:hover {
+    background: #333333;
+  }
+  .btn-highlight {
+    background-color: #FFD6A1;
+    color: #1e1e1e;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .sugestoes {
+    margin-top: 0.5rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+  }
+  
+  .sugestao-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sugestao-item:last-child {
+    border-bottom: none;
+  }
+  
+  .sugestao-item:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .sugestao-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  .atividade-finalizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Garante que ocupe a altura total do layout */
+    min-height: calc(100vh - 100px); /* Ajuste para excluir o header/nav se necessário */
+  }
+  
+  .card-final {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  }

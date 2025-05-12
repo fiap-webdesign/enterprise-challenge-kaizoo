@@ -1,0 +1,402 @@
+/* =======================
+   Estrutura principal
+======================= */
+.comunidade-page {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+.comunidade-esquerda,
+.comunidade-direita {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comunidade-feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================
+   Títulos
+======================= */
+.titulo-pagina {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.titulo-destaques,
+.titulo-feed,
+.evento-titulo,
+.titulo-leaderboard {
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.titulo-destaques {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.titulo-feed {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.evento-titulo,
+.titulo-leaderboard {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =======================
+   Destaques
+======================= */
+.card-destaques {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.conteudo-destaques {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.coluna-esquerda,
+.coluna-meio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coluna-esquerda {
+  width: 37.5%;
+}
+
+.coluna-meio {
+  width: 37.5%;
+  height: 100%;
+}
+
+.coluna-direita {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.coluna-esquerda img,
+.coluna-meio img,
+.coluna-direita img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.coluna-meio img{
+  height: 100%;
+}
+
+.coluna-direita h4,
+.coluna-direita p {
+  margin-bottom: 0.5rem;
+}
+
+.botao-saiba-mais {
+  background-color: #ffd9b3;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  align-self: start;
+}
+
+/* =======================
+   Perfil e Leaderboard
+======================= */
+.perfil-card,
+.leaderboard-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil-avatar-nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar-perfil {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nome-usuario {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.descricao-usuario {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.mascote-perfil img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.subtitulo-leaderboard {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.lista-leaderboard {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lista-leaderboard li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lista-leaderboard img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.lista-leaderboard .nome {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.lista-leaderboard .xp {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+/* =======================
+   Feed
+======================= */
+.feed-wrapper {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.feed-header button {
+  background: #ececec;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.feed-card {
+  background: #ececec !important;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feed-header-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-user {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.feed-xp-badge {
+  background: linear-gradient(to right, #ffeaa7, #fab1a0);
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+}
+
+.feed-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.emoji-feedback {
+  background-color: #ffeecb;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a3c14;
+}
+
+.feed-reactions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.carregar-mais {
+  align-self: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  background: #ddd;
+  border: none;
+  font-weight: bold;
+}
+
+/* =======================
+   Eventos
+======================= */
+.evento-wrapper {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* =======================
+   Responsividade
+======================= */
+@media (max-width: 1024px) {
+  .comunidade-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .comunidade-esquerda,
+  .comunidade-direita {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .perfil-card,
+  .leaderboard-card,
+  .evento-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .comunidade-feed {
+    width: 100%;
+  }
+
+  .conteudo-destaques {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .coluna-esquerda,
+  .coluna-meio,
+  .coluna-direita {
+    width: 100%;
+  }
+
+  .coluna-direita {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .botao-saiba-mais {
+    align-self: stretch;
+  }
+
+  .feed-header {
+    flex-direction: column;
+  }
+
+  .feed-header button {
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+
+  .feed-card {
+    font-size: 0.95rem;
+  }
+
+  .carregar-mais {
+    width: 100%;
+  }
+}

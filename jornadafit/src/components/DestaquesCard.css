@@ -1,0 +1,108 @@
+.card-destaques {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.titulo-destaques {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.conteudo-destaques {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+/* Coluna 1 - Mini Banners Verticais */
+.coluna-esquerda {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coluna-esquerda img {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Coluna 2 - Banner Horizontal */
+.coluna-meio {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coluna-meio img {
+  width: 100%;
+  height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Coluna 3 - Texto e Botão */
+.coluna-direita {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.coluna-direita h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.coluna-direita p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.botao-saiba-mais {
+  align-self: start;
+  background-color: #ffd9b3;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .conteudo-destaques {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .coluna-esquerda,
+  .coluna-meio,
+  .coluna-direita {
+    width: 100%;
+  }
+
+  .coluna-direita {
+    gap: 1rem;
+  }
+
+  .botao-saiba-mais {
+    align-self: stretch;
+  }
+}
