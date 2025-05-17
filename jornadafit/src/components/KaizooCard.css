@@ -1,0 +1,38 @@
+/* KaizooCard.css */
+
+.kaizoo-card-container {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.kaia-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.level-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 1rem;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.level-circle {
+  background: #ffd6a5;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

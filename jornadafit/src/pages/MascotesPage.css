@@ -1,0 +1,436 @@
+/* =======================
+   Layout principal
+======================= */
+.mascotes-container {
+  text-align: center;
+  padding: 2rem;
+  background: #1e1e1e;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =======================
+   Etapas do topo
+======================= */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #3a3a3a;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.step.active {
+  background: white;
+  color: #1e1e1e;
+}
+
+/* =======================
+   Carousel
+======================= */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 420px;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  max-width: 90vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* =======================
+   Seta de navegação
+======================= */
+.arrow-btn {
+  font-size: 2.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow-btn:first-of-type {
+    left: 0.5rem;
+  }
+
+  .arrow-btn:last-of-type {
+    right: 0.5rem;
+  }
+}
+
+/* =======================
+   Card visual
+======================= */
+.card-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+}
+
+.mascote-card {
+  width: 180px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent !important;
+}
+
+.mascote-card.inactive {
+  filter: grayscale(100%) brightness(0.7);
+  transform: scale(0.9);
+}
+
+.mascote-card.active {
+  transform: scale(1.05);
+  filter: none;
+}
+
+/* =======================
+   Header do card
+======================= */
+.mascote-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  text-align: center;
+}
+
+.mascote-header h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.mascote-header p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+/* =======================
+   Flip Animation
+======================= */
+.flip-container {
+  perspective: 1000px;
+  width: 180px;
+  height: 380px;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =======================
+   Botões
+======================= */
+.btn-highlight {
+  background: #ffd6a5;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #333;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+
+/* =======================
+   Questionário
+======================= */
+
+.questionario-container {
+  background: white;
+  color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.questionario-container h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.questionario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+.questionario-form p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.questionario-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+/* Botões do questionário */
+.botoes-questionario {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.botoes-questionario .btn-secondary,
+.botoes-questionario .btn-highlight {
+  flex: 1;
+  text-align: center;
+}
+
+/* =======================
+   Animações de transição
+======================= */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+}
+
+/* =======================
+   Tela final
+======================= */
+.tela-final-container {
+  background: white;
+  color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tela-final-img {
+  width: 220px;
+  margin-bottom: 1.5rem;
+}
+
+.tela-final-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tela-final-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+/* =======================
+   Responsividade
+======================= */
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .step {
+    width: 90%;
+    text-align: center;
+  }
+
+  .carousel-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+  }
+
+  .carousel {
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .card-column {
+    min-width: unset;
+  }
+
+  /* Mantém a altura total dos cards */
+  .mascote-card,
+  .flip-container {
+    width: 160px;
+    height: 380px;
+  }
+
+  .mascote-header h5 {
+    font-size: 0.8rem;
+  }
+
+  .mascote-header p {
+    font-size: 0.65rem;
+  }
+
+  .btn-secondary {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .btn-highlight {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .mascotes-container {
+    padding: 1rem;
+  }
+
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0 1rem;
+    z-index: 10;
+  }
+
+  .arrow-btn:first-of-type {
+    left: 0.5rem;
+  }
+
+  .arrow-btn:last-of-type {
+    right: 0.5rem;
+  }
+
+
+    .questionario-container {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .botoes-questionario {
+    flex-direction: column;
+  }
+}
