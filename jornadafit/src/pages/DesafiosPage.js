@@ -1,29 +1,35 @@
 // src/pages/DesafiosPage.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import kaiaBanner from "../img/kaiaWalking.png";
+import KaizooCard from "../components/KaizooCard";
 import badge1 from "../img/badge1.png";
 import badge2 from "../img/badge2.png";
 import badge3 from "../img/badge3.png";
 import "./DesafiosPage.css";
 
 export default function DesafiosPage() {
+  const [mascote, setMascote] = useState(null);
+
+  useEffect(() => {
+    const savedMascote = JSON.parse(localStorage.getItem("kaizoo"));
+    if (savedMascote) setMascote(savedMascote);
+  }, []);
+
   return (
     <Layout>
       <div className="desafios-page">
         {/* Lado Esquerdo - Perfil */}
         <div className="perfil-section">
-          {/* Card: Kaia + Nível */}
-          <div className="perfil-kaia-card">
-            <img src={kaiaBanner} alt="Kaia" className="kaia-img" />
-            <div className="level-info">
-              <div className="level-circle">5</div>
-              <div className="level-text">
-                <strong>Nível 5</strong>
-                <p>325XP para o próximo nível!</p>
-              </div>
-            </div>
-          </div>
+          {/* Card: Mascote com KaizooCard */}
+          {mascote && (
+            <KaizooCard
+              imagem={mascote.front}
+              nivel={5}
+              xpRestante="325XP"
+              nome={mascote.nome}
+              subtitulo={mascote.subtitulo}
+            />
+          )}
 
           {/* Card: Badges */}
           <div className="badges-card">

@@ -1,4 +1,3 @@
-// ProgressoPage.js
 import React from "react";
 import Layout from "../components/Layout";
 import "./ProgressoPage.css";
@@ -9,15 +8,25 @@ import badge3 from "../img/badge3.png";
 import KaizooCard from "../components/KaizooCard";
 
 export default function ProgressoPage() {
+  const mascote = JSON.parse(localStorage.getItem("kaizoo"));
+
   return (
     <Layout>
       <div className="progresso-container">
         <h2 className="titulo-semana">Métricas da Semana</h2>
 
         <div className="progresso-grid">
-          {/* Coluna 1 - Kaia + Nível + Badges */}
+          {/* Coluna 1 - KaizooCard + Badges */}
           <div className="coluna-esquerda">
-            <KaizooCard />
+            {mascote && (
+              <KaizooCard
+                imagem={mascote.front}
+                nivel={5}
+                xpRestante="325XP"
+                nome={mascote.nome}
+                subtitulo={mascote.subtitulo}
+              />
+            )}
 
             <div className="badges">
               <h4>Badges</h4>
@@ -29,7 +38,7 @@ export default function ProgressoPage() {
             </div>
           </div>
 
-          {/* Coluna 2 - Métricas, metas, recordes e desafios */}
+          {/* Coluna 2 - Métricas, Metas, Recordes, Desafios */}
           <div className="coluna-direita">
             <div className="metricas-grid">
               <div className="stat-card amarelo">
@@ -70,12 +79,8 @@ export default function ProgressoPage() {
                     Correr por 3 min. seguidos
                   </label>
                 </div>
-
                 <div className="alerta alerta-metas">
-                  <span role="img" aria-label="kaia">
-                    🐱
-                  </span>
-                  <strong>Falta apenas 1 meta!</strong>
+                  🐱 <strong>Falta apenas 1 meta!</strong>
                 </div>
               </div>
 
@@ -83,19 +88,15 @@ export default function ProgressoPage() {
                 <strong>Recordes Pessoais</strong>
                 <ul className="lista-recordes">
                   <li>
-                    <span className="estrela">⭐</span> Maior distância
-                    percorrida: <b>15 km</b>
+                    ⭐ Maior distância percorrida: <b>15 km</b>
                   </li>
                   <li>
-                    <span className="estrela">⭐</span> Maior tempo de
-                    atividade: <b>2h30</b>
+                    ⭐ Maior tempo de atividade: <b>2h30</b>
                   </li>
                   <li>
-                    <span className="estrela">⭐</span> Semana mais ativa:{" "}
-                    <b>6 dias</b>
+                    ⭐ Semana mais ativa: <b>6 dias</b>
                   </li>
                 </ul>
-
                 <div className="alerta alerta-recordes">
                   🐱 Já bateu 2 recordes essa semana!
                 </div>
@@ -109,20 +110,16 @@ export default function ProgressoPage() {
                   <h5>🏃‍♂️ Corrida Matinal</h5>
                   <p>
                     Correr 3km pela manhã!
-                    <br />
-                    Recompensa: <b>45XP</b>
-                    <br />
-                    Expira em: <b>4 dias</b>
+                    <br /> Recompensa: <b>45XP</b>
+                    <br /> Expira em: <b>4 dias</b>
                   </p>
                 </div>
                 <div className="desafio">
-                  <h5>🏃‍♂️ Corrida Matinal</h5>
+                  <h5>🚶‍♀️ Caminhada Noturna</h5>
                   <p>
-                    Correr 3km pela manhã!
-                    <br />
-                    Recompensa: <b>45XP</b>
-                    <br />
-                    Expira em: <b>4 dias</b>
+                    Caminhar 2km após as 20h.
+                    <br /> Recompensa: <b>30XP</b>
+                    <br /> Expira em: <b>2 dias</b>
                   </p>
                 </div>
               </div>

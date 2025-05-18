@@ -36,3 +36,43 @@
   justify-content: center;
   align-items: center;
 }
+.card.card-mascote {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.kaia-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.level-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.5rem;
+  background: #f4f4f4;
+  margin-top: 1rem;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.level-circle {
+  background: #ffd6a5;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
