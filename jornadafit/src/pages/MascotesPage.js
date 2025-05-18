@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Layout from "../components/Layout";
+import KaizooButton from "../components/KaizooButton";
 import "./MascotesPage.css";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useNavigate } from "react-router-dom";
@@ -77,6 +78,11 @@ export default function MascotesPage() {
   }, []);
 
   useEffect(() => {
+    document.body.classList.toggle("step-intro", step < 4);
+    return () => document.body.classList.remove("step-intro");
+  }, [step]);
+
+  useEffect(() => {
     if (cardRefs.current[index] && !isMobile) {
       cardRefs.current[index].scrollIntoView({
         behavior: "smooth",
@@ -96,17 +102,25 @@ export default function MascotesPage() {
     setIndex((i) => (i === mascotes.length - 1 ? 0 : i + 1));
   };
 
-  const showLayoutSidebar = step === 4;
+  const escolherKaizoo = () => {
+    const escolhido = mascotes[index];
+    localStorage.setItem("kaizoo", JSON.stringify(escolhido));
+    setMascoteEscolhido(escolhido);
+    setStep(4);
+  };
 
   return (
     <div
       className="mascotes-wrapper"
-      style={{ backgroundColor: step < 4 ? "#000" : "", minHeight: "100vh" }}
+      style={{
+        backgroundColor: step < 4 ? "#000" : "#1e1e1e",
+        minHeight: "100vh",
+      }}
     >
-      <Layout hideSidebar={!showLayoutSidebar}>
+      <Layout hideSidebar={step < 4}>
         <div
           className="mascotes-container"
-          style={{ padding: showLayoutSidebar ? "2rem" : "0" }}
+          style={{ padding: step < 4 ? "0" : "2rem" }}
         >
           {step < 4 && (
             <div className="steps">
@@ -173,14 +187,15 @@ export default function MascotesPage() {
                                 </div>
                               </div>
                               {isActive && (
-                                <button
-                                  className="btn-secondary mt-1"
+                                <KaizooButton
+                                  type="secondary"
+                                  className="mt-1"
                                   onClick={() =>
                                     setFlippedIndex(isFlipped ? null : i)
                                   }
                                 >
                                   {isFlipped ? "VOLTAR" : "VER PERSONALIDADE"}
-                                </button>
+                                </KaizooButton>
                               )}
                             </div>
                           );
@@ -190,12 +205,13 @@ export default function MascotesPage() {
                         →
                       </button>
                     </div>
-                    <button
-                      className="btn-highlight mt-4"
+                    <KaizooButton
+                      type="highlight"
+                      className="mt-4"
                       onClick={() => setStep(2)}
                     >
                       Escolher Kaizoo
-                    </button>
+                    </KaizooButton>
                   </>
                 )}
 
@@ -219,7 +235,6 @@ export default function MascotesPage() {
                         <input type="radio" name="objetivo" /> Aumentar
                         resistência
                       </label>
-
                       <p>
                         <strong>
                           Com qual frequência se exercita atualmente?
@@ -236,7 +251,6 @@ export default function MascotesPage() {
                         <input type="radio" name="frequencia" /> Menos de 3
                         vezes por semana
                       </label>
-
                       <p>
                         <strong>Quais atividades você mais gosta?</strong>
                       </p>
@@ -256,18 +270,12 @@ export default function MascotesPage() {
                       </label>
                     </form>
                     <div className="botoes-questionario mt-4">
-                      <button
-                        className="btn-secondary"
-                        onClick={() => setStep(1)}
-                      >
+                      <KaizooButton type="secondary" onClick={() => setStep(1)}>
                         Voltar
-                      </button>
-                      <button
-                        className="btn-highlight"
-                        onClick={() => setStep(3)}
-                      >
+                      </KaizooButton>
+                      <KaizooButton type="highlight" onClick={() => setStep(3)}>
                         Finalizar
-                      </button>
+                      </KaizooButton>
                     </div>
                   </div>
                 )}
@@ -283,12 +291,37 @@ export default function MascotesPage() {
                     <p className="tela-final-text">
                       Seu perfil foi configurado com sucesso!
                     </p>
-                    <button
-                      className="btn-highlight mt-4"
-                      onClick={() => navigate("/home")}
+                    <KaizooButton
+                      type="highlight"
+                      className="mt-4"
+                      onClick={escolherKaizoo}
                     >
                       Ir para início
-                    </button>
+                    </KaizooButton>
+                  </div>
+                )}
+
+                {step === 4 && mascoteEscolhido && (
+                  <div className="tela-final-container">
+                    <h2 className="tela-final-title">Esse é o seu Kaizoo!</h2>
+                    <div
+                      className="mascote-card active"
+                      style={{
+                        backgroundImage: `url(${mascoteEscolhido.front})`,
+                      }}
+                    >
+                      <div className="mascote-header">
+                        <h5>{mascoteEscolhido.nome}</h5>
+                        <p>{mascoteEscolhido.subtitulo}</p>
+                      </div>
+                    </div>
+                    <KaizooButton
+                      type="highlight"
+                      className="mt-4"
+                      onClick={() => setStep(1)}
+                    >
+                      Alterar Kaizoo
+                    </KaizooButton>
                   </div>
                 )}
               </div>

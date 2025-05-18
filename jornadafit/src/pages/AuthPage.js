@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AuthPage.css";
 import mascotesImg from "../img/successMascots.png";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function AuthPage() {
   const [modo, setModo] = useState("cadastro");
@@ -21,6 +22,15 @@ export default function AuthPage() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const modoInicial = params.get("modo");
+    if (modoInicial === "login" || modoInicial === "cadastro") {
+      setModo(modoInicial);
+    }
+  }, [location.search]);
 
   const handleCadastro = (e) => {
     e.preventDefault();

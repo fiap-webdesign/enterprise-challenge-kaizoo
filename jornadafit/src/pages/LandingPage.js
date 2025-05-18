@@ -7,6 +7,7 @@ import tatoIcon from "../img/koa.png";
 import dinoIcon from "../img/dino.png";
 import pennyIcon from "../img/penny.png";
 import koaIcon from "../img/penny.png";
+import KaizooButton from "../components/KaizooButton";
 
 import kaiaBanner from "../img/kaiaWalkingBack.png";
 import tatoBanner from "../img/TatoListingBack.png";
@@ -38,12 +39,14 @@ export default function LandingPage() {
       <header className="landing-header">
         <span className="logo">Kaizoo</span>
         <div className="landing-buttons">
-          <Link to="/auth">
-            <button className="btn-highlight">Criar Conta</button>
-          </Link>
-          <Link to="/auth">
-            <button className="btn-outline">Fazer Login</button>
-          </Link>
+          <div className="landing-buttons">
+            <KaizooButton to="/auth?modo=cadastro" type="highlight">
+              Criar Conta
+            </KaizooButton>
+            <KaizooButton to="/auth?modo=login" type="btn-outline">
+              Fazer Login
+            </KaizooButton>
+          </div>
         </div>
       </header>
 
@@ -258,12 +261,12 @@ export default function LandingPage() {
             <p>Comece agora sua jornada com Kaizoo!</p>
 
             <div className="cta-buttons">
-              <Link to="/auth">
-                <button className="btn-cta-yellow">Criar Conta</button>
-              </Link>
-              <Link to="/auth">
-                <button className="btn-cta-blue">Fazer Login</button>
-              </Link>
+              <KaizooButton to="/auth?modo=cadastro" type="highlight">
+                Criar Conta
+              </KaizooButton>
+              <KaizooButton to="/auth?modo=login" type="btn-outline">
+                Fazer Login
+              </KaizooButton>
             </div>
           </div>
         </div>

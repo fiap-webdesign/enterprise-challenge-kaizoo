@@ -1,42 +1,53 @@
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import "./HomePage.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { Link } from "react-router-dom";
+import KaizooCard from "../components/KaizooCard";
+import KaizooButton from "../components/KaizooButton";
 
-import kaiaWalking from "../img/kaiaWalking.png";
+import personIcon from "../img/personIcon.png";
+import walkIcon from "../img/walkIcon.png";
+import bikeIcon from "../img/bikeIcon.png";
 import kaiaIcon from "../img/kaia.png";
 import koaIcon from "../img/koa.png";
 import dinoIcon from "../img/dino.png";
 import pennyIcon from "../img/penny.png";
 
-import walkIcon from "../img/walkIcon.png";
-import personIcon from "../img/personIcon.png";
-import bikeIcon from "../img/bikeIcon.png";
-
 export default function HomePage() {
+  const [mascote, setMascote] = useState(null);
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    const mascoteSalvo = JSON.parse(localStorage.getItem("kaizoo"));
+    const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+    if (mascoteSalvo) setMascote(mascoteSalvo);
+    if (usuarioSalvo) setUsuario(usuarioSalvo);
+  }, []);
+
   return (
     <Layout>
       <div className="home-grid">
         {/* Coluna Esquerda */}
         <div className="left-panel">
-          {/* Card do Kaizoo */}
-          <div className="kaizoo-card">
-            <img src={kaiaWalking} alt="Kaizoo" className="kaia-img" />
-            <div className="level-footer">
-              <div className="level-circle">5</div>
-              <div>
-                <strong>Nível 5</strong>
-                <p>325XP para o próximo nível!</p>
-              </div>
-            </div>
-          </div>
+          {usuario && <h2>Olá, {usuario.username}!</h2>}
 
-          {/* Botões – FORA do card */}
+          {mascote && (
+            <KaizooCard
+              imagem={mascote.front}
+              nome={mascote.nome}
+              subtitulo={mascote.subtitulo}
+              nivel={5}
+              xpRestante="325XP"
+            />
+          )}
+
           <div className="action-buttons">
-            <Link to="/atividade">
-              <button className="btn-highlight">Registrar Atividade</button>
-            </Link>
-            <button className="btn-kaizoo-dark">Compartilhar</button>
+            <KaizooButton to="/atividade" type="highlight">
+              Registrar Atividade
+            </KaizooButton>
+            <KaizooButton onClick={() => alert("Compartilhado!")} type="dark">
+              Compartilhar
+            </KaizooButton>
           </div>
         </div>
 
@@ -52,7 +63,7 @@ export default function HomePage() {
             <p className="small">Meta: 10km corridos</p>
             <ProgressBar
               now={50}
-              label={`50%`}
+              label="50%"
               className="kaizoo-progress"
               animated
             />

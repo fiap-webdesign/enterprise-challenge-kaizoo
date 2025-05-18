@@ -1,0 +1,36 @@
+.botao {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao.primary {
+  background-color: #ffd6a5;
+  color: #1e1e1e;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+}
+
+.botao.secondary {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+}
+
+.botao.secondary:hover {
+  background: #333;
+}
+
+.botao.danger {
+  background: #e74c3c;
+  color: white;
+  padding: 0.75rem 2rem;
+}
+
+.botao.small {
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+}

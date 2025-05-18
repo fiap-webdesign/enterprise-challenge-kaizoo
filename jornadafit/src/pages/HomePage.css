@@ -205,7 +205,7 @@
 .activity-badge {
   width: 124px;
   height: 44px;
-  background: #ebebeb;
+  background: #ebebeb !important;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -213,6 +213,11 @@
   gap: 0.5rem;
   font-size: 16px;
   font-weight: 600; /* semibold */
-  color: #1e1e1e;
+  color: #1e1e1e !important;
   font-family: 'Poppins', sans-serif;
+}
+.titulo-home {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }

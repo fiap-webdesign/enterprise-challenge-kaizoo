@@ -434,3 +434,25 @@
     flex-direction: column;
   }
 }
+body.step-intro {
+  background-color: #000 !important;
+  overflow-x: hidden;
+}
+
+.layout.hide-sidebar .kaizoo-sidebar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .layout.hide-sidebar .kaizoo-sidebar {
+    display: none;
+  }
+
+  .layout.hide-sidebar .content {
+    margin-left: 0;
+  }
+
+  .mascotes-wrapper {
+    padding-top: 2rem;
+  }
+}
