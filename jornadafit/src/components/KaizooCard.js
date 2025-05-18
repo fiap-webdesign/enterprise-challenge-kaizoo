@@ -1,17 +1,22 @@
 // src/components/KaizooCard.js
 import React from "react";
-import kaiaWalking from "../img/kaiaWalking.png";
 import "./KaizooCard.css";
 
-export default function KaizooCard() {
+export default function KaizooCard({
+  imagem,
+  nivel,
+  xpRestante,
+  nome,
+  subtitulo,
+}) {
   return (
-    <div className="kaizoo-card">
-      <img src={kaiaWalking} alt="Kaizoo" className="kaia-img" />
+    <div className="kaizoo-card-container">
+      <img src={imagem} alt={nome} className="kaia-img" />
       <div className="level-footer">
-        <div className="level-circle">5</div>
+        <div className="level-circle">{nivel}</div>
         <div>
-          <strong>Nível 5</strong>
-          <p>325XP para o próximo nível!</p>
+          <strong>Nível {nivel}</strong>
+          <p>{xpRestante} para o próximo nível!</p>
         </div>
       </div>
     </div>
