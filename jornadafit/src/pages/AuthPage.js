@@ -50,7 +50,12 @@ export default function AuthPage() {
         formData.login === dadosSalvos.email) &&
       formData.loginSenha === dadosSalvos.senha
     ) {
-      navigate("/home");
+      const jaTemKaizoo = localStorage.getItem("kaizoo");
+      if (jaTemKaizoo) {
+        navigate("/home");
+      } else {
+        navigate("/mascotes");
+      }
     } else {
       setErroLogin("Usuário ou senha incorretos. Tente novamente.");
     }

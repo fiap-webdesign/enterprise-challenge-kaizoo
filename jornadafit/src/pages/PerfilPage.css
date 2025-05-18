@@ -1,0 +1,289 @@
+.perfil-container {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.perfil-topo {
+   display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+.perfil-coluna-esquerda {
+  flex: 1 1 60%; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.perfil-coluna-direita {
+  flex: 0 0 auto; 
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+
+.perfil-info {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start
+}
+
+.perfil-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-nome {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.perfil-descricao {
+  max-width: 500px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.perfil-contagem {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.perfil-acoes {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto; 
+  align-self: flex-start;
+}
+
+.badges-section {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.badges-linha {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badges-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.badges-icons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badges-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+.badges-linha img {
+  width: 48px;
+  height: 48px;
+}
+
+.perfil-estatisticas {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.perfil-esquerda {
+  flex: 1;
+  min-width: 260px;
+}
+
+.perfil-direita {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.estatistica-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+ background: #f4f4f4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  color: #1e1e1e;
+  line-height: 1.2;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+}
+
+/* Cores */
+.amarelo { background: #ffe0a3; }
+.azul { background: #d7e7ff; }
+.rosa { background: #fdd0d8; }
+.rosa-claro { background: #fce4ec; }
+.cinza { background: #eeeeee; }
+.laranja { background: #ffe6c7; }
+.branco { background: #ffffff; }
+
+.registro-e-atividades {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.galeria, .favoritas {
+  flex: 1;
+}
+
+.card.galeria, .card.favoritas {
+  flex: 1;
+  min-width: 250px;
+}
+
+.registros-fakes {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.registro-item {
+  width: 60px;
+  height: 60px;
+  background: repeating-linear-gradient(45deg, #ddd 0, #ddd 10px, #eee 10px, #eee 20px);
+  border-radius: 8px;
+}
+
+.ver-todas {
+  font-size: 0.75rem;
+  color: #333;
+  text-align: right;
+  cursor: pointer;
+}
+
+.activity-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.activity-badge {
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .perfil-topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .perfil-coluna-direita {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .perfil-coluna-direita button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .perfil-estatisticas {
+    flex-direction: column;
+  }
+
+  .card.card-mascote,
+  .perfil-direita {
+    width: 100%;
+  }
+
+  .estatistica-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .registro-e-atividades {
+    flex-direction: column;
+  }
+
+  .card.galeria,
+  .card.favoritas {
+    width: 100%;
+  }
+
+  .activity-icons {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .activity-badge {
+    font-size: 16px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .registros-fakes {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .registro-item {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .stat-card {
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+
+  .stat-card span {
+    font-size: 0.65rem;
+  }
+}
