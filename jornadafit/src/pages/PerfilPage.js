@@ -1,29 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
+import KaizooCard from "../components/KaizooCard";
 import "./PerfilPage.css";
-import ProgressBar from "react-bootstrap/ProgressBar";
 
-import kaiaWalking from "../img/kaiaWalking.png";
-import badge1 from "../img/badge1.png"; // Exemplo
+import badge1 from "../img/badge1.png";
 import badge2 from "../img/badge2.png";
 import badge3 from "../img/badge3.png";
 
-import walkIcon from "../img/walkIcon.png";
-import personIcon from "../img/personIcon.png";
-import bikeIcon from "../img/bikeIcon.png";
-
 export default function PerfilPage() {
+  const [avatar, setAvatar] = useState("");
+  const [username, setUsername] = useState("Usuário");
+  const [mascote, setMascote] = useState(null);
+
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem("usuario"));
+    const savedAvatar = localStorage.getItem("avatar");
+    const savedKaizoo = JSON.parse(localStorage.getItem("kaizoo"));
+
+    if (savedUser?.username) setUsername(savedUser.username);
+    if (savedAvatar) setAvatar(savedAvatar);
+    if (savedKaizoo) setMascote(savedKaizoo);
+  }, []);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64 = reader.result;
+      setAvatar(base64);
+      localStorage.setItem("avatar", base64);
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <Layout>
       <div className="perfil-container">
         <div className="perfil-topo card">
           <div className="perfil-coluna-esquerda">
-            <img
-              src="https://i.imgur.com/hv3ZbZ9.png"
-              alt="Avatar"
-              className="perfil-avatar"
-            />
-            <h2 className="perfil-nome">Julia Costa</h2>
+            <label htmlFor="upload-foto" className="upload-avatar-label">
+              <img
+                src={avatar || "https://i.imgur.com/hv3ZbZ9.png"}
+                alt="Avatar"
+                className="perfil-avatar"
+              />
+              <input
+                id="upload-foto"
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                style={{ display: "none" }}
+              />
+            </label>
+
+            <h2 className="perfil-nome">{username}</h2>
             <p className="perfil-descricao">
               Adoro começar o dia com movimento e boas energias. Entre um
               alongamento e uma pedalada no parque, busco leveza, saúde e
@@ -37,7 +69,7 @@ export default function PerfilPage() {
                 <strong>10</strong> COMUNIDADES
               </span>
               <span>
-                <strong>1</strong> MASCOTES
+                <strong>1</strong> MASCOTE
               </span>
             </div>
           </div>
@@ -60,15 +92,16 @@ export default function PerfilPage() {
         </div>
 
         <div className="perfil-estatisticas">
-          <div className="card card-mascote">
-            <img src={kaiaWalking} alt="Kaia" className="kaia-img" />
-            <div className="level-footer">
-              <div className="level-circle">5</div>
-              <div>
-                <strong>Nível 5</strong>
-                <p>325XP para o próximo nível!</p>
-              </div>
-            </div>
+          <div className="perfil-esquerda">
+            {mascote && (
+              <KaizooCard
+                imagem={mascote.front}
+                nivel={5}
+                xpRestante="325XP"
+                nome={mascote.nome}
+                subtitulo={mascote.subtitulo}
+              />
+            )}
           </div>
 
           <div className="perfil-direita">
