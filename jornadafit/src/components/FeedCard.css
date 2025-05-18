@@ -1,0 +1,91 @@
+.feed-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feed-header-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed-user-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feed-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feed-user-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.feed-user {
+  font-weight: 700;
+  color: #222;
+}
+
+.tempo {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.feed-xp-badge {
+  background: linear-gradient(to right, #ffeaa7, #fab1a0);
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+}
+
+.feed-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.feed-texto {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.emoji-feedback {
+  background-color: #ffeecb;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  color: #4a3c14;
+}
+
+.feed-reactions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
