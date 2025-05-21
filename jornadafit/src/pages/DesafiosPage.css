@@ -138,7 +138,7 @@
 }
 
 /* Cores por tipo */
-.active {
+.challenge-card.active {
   background: #ffe0b3;
 }
 
