@@ -1,7 +1,7 @@
 // KaizooButton.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./KaizooButton.css"; // Se estiver usando CSS separado
+import "./KaizooButton.css";
 
 export default function KaizooButton({
   to,

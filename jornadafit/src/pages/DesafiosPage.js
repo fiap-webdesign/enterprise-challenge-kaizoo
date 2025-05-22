@@ -1,4 +1,3 @@
-// src/pages/DesafiosPage.js
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import KaizooCard from "../components/KaizooCard";
@@ -18,9 +17,7 @@ export default function DesafiosPage() {
   return (
     <Layout>
       <div className="desafios-page">
-        {/* Lado Esquerdo - Perfil */}
         <div className="perfil-section">
-          {/* Card: Mascote com KaizooCard */}
           {mascote && (
             <KaizooCard
               imagem={mascote.front}
@@ -31,20 +28,17 @@ export default function DesafiosPage() {
             />
           )}
 
-          {/* Card: Badges */}
           <div className="badges-card">
             <strong>Badges</strong>
             <div className="badges-list">
-              <img src={badge1} alt="Badge 1" />
-              <img src={badge2} alt="Badge 2" />
-              <img src={badge3} alt="Badge 3" />
+              <img src={badge1} alt="Badge dourada de conquista" />
+              <img src={badge2} alt="Badge prateada de realização" />
+              <img src={badge3} alt="Badge bronze de participação" />
             </div>
           </div>
         </div>
 
-        {/* Lado Direito - Cards */}
         <div className="cards-section">
-          {/* Desafios Ativos */}
           <div className="card">
             <h3>Desafios Ativos</h3>
             <div className="card-row">
@@ -63,7 +57,6 @@ export default function DesafiosPage() {
             </div>
           </div>
 
-          {/* Desafios Disponíveis */}
           <div className="card">
             <h3>Desafios Disponíveis</h3>
             <div className="card-row">
@@ -83,7 +76,6 @@ export default function DesafiosPage() {
             </div>
           </div>
 
-          {/* Desafios Concluídos */}
           <div className="card">
             <h3>Desafios Concluídos</h3>
             <div className="card-row">

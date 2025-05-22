@@ -12,13 +12,22 @@ export default function DestaquesCard() {
       <div className="conteudo-destaques">
         {/* Coluna 1: Mini Banners Verticais */}
         <div className="coluna-esquerda">
-          <img src={miniBanner0} alt="Mini Banner 1" />
-          <img src={miniBanner1} alt="Mini Banner 2" />
+          <img
+            src={miniBanner0}
+            alt="Mini banner com ilustração de treino ao ar livre"
+          />
+          <img
+            src={miniBanner1}
+            alt="Mini banner com ilustração de alongamento ou yoga"
+          />
         </div>
 
         {/* Coluna 2: Banner Horizontal */}
         <div className="coluna-meio">
-          <img src={banner1} alt="Banner Principal" />
+          <img
+            src={banner1}
+            alt="Banner principal com imagem de destaque do desafio da semana"
+          />
         </div>
 
         {/* Coluna 3: Texto e Botão */}

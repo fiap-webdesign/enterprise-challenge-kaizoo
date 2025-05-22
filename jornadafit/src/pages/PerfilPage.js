@@ -43,7 +43,7 @@ export default function PerfilPage() {
             <label htmlFor="upload-foto" className="upload-avatar-label">
               <img
                 src={avatar || "https://i.imgur.com/hv3ZbZ9.png"}
-                alt="Avatar"
+                alt="Foto de perfil do usuário"
                 className="perfil-avatar"
               />
               <input
@@ -84,9 +84,9 @@ export default function PerfilPage() {
           <div className="badges">
             <h4 className="badges-title">Badges</h4>
             <div className="badges-icons">
-              <img src={badge1} alt="Badge" />
-              <img src={badge2} alt="Badge" />
-              <img src={badge3} alt="Badge" />
+              <img src={badge1} alt="Insígnia Kaizoo 1" />
+              <img src={badge2} alt="Insígnia Kaizoo 2" />
+              <img src={badge3} alt="Insígnia Kaizoo 3" />
             </div>
           </div>
         </div>
@@ -162,11 +162,21 @@ export default function PerfilPage() {
               <div className="card favoritas">
                 <strong>Atividades Preferidas</strong>
                 <div className="activity-icons">
-                  <div className="activity-badge">🚶</div>
-                  <div className="activity-badge">🧘</div>
-                  <div className="activity-badge">🏃‍♀️</div>
-                  <div className="activity-badge">🚴‍♂️</div>
-                  <div className="activity-badge">🌿</div>
+                  <div className="activity-badge" title="Caminhada">
+                    🚶
+                  </div>
+                  <div className="activity-badge" title="Yoga">
+                    🧘
+                  </div>
+                  <div className="activity-badge" title="Corrida">
+                    🏃‍♀️
+                  </div>
+                  <div className="activity-badge" title="Ciclismo">
+                    🚴‍♂️
+                  </div>
+                  <div className="activity-badge" title="Meditação">
+                    🌿
+                  </div>
                 </div>
               </div>
             </div>

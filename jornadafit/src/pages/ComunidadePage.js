@@ -26,13 +26,12 @@ export default function ComunidadePage() {
       </div>
 
       <div className="comunidade-page">
-        {/* Coluna esquerda */}
         <div className="comunidade-esquerda">
           <div className="perfil-card">
             <div className="perfil-avatar-nome">
               <img
                 src={juliaAvatar}
-                alt="Julia Costa"
+                alt="Foto de perfil de Julia Costa"
                 className="avatar-perfil"
               />
               <h4 className="nome-usuario">Julia Costa</h4>
@@ -43,7 +42,7 @@ export default function ComunidadePage() {
               motivação no meu ritmo.
             </p>
             <div className="mascote-perfil">
-              <img src={juliaKaizoo} alt="Mascote" />
+              <img src={juliaKaizoo} alt="Mascote Kaia da Julia" />
             </div>
           </div>
 
@@ -54,27 +53,27 @@ export default function ComunidadePage() {
             </p>
             <ul className="lista-leaderboard">
               <li>
-                <img src={avatar1} alt="Mascote" />
+                <img src={avatar1} alt="Mascote Dino de Camila Rocha" />
                 <span className="nome">Camila Rocha</span>
                 <span className="xp">1045XP</span>
               </li>
               <li>
-                <img src={avatar2} alt="Mascote" />
+                <img src={avatar2} alt="Mascote Kaia de Lucas Ferreira" />
                 <span className="nome">Lucas Ferreira</span>
                 <span className="xp">995XP</span>
               </li>
               <li>
-                <img src={avatar3} alt="Mascote" />
+                <img src={avatar3} alt="Mascote Koa de Julia Costa" />
                 <span className="nome">Julia Costa</span>
                 <span className="xp">990XP</span>
               </li>
               <li>
-                <img src={avatar4} alt="Mascote" />
+                <img src={avatar4} alt="Mascote Penny de Ana Martins" />
                 <span className="nome">Ana Martins</span>
                 <span className="xp">760XP</span>
               </li>
               <li>
-                <img src={avatar5} alt="Mascote" />
+                <img src={avatar5} alt="Mascote Dino de Marcos Paulo" />
                 <span className="nome">Marcos Paulo</span>
                 <span className="xp">730XP</span>
               </li>
@@ -82,7 +81,6 @@ export default function ComunidadePage() {
           </div>
         </div>
 
-        {/* Coluna central */}
         <div className="comunidade-feed">
           <div className="feed-wrapper">
             <h2 className="titulo-feed">Feed</h2>
@@ -129,7 +127,6 @@ export default function ComunidadePage() {
           </div>
         </div>
 
-        {/* Coluna direita */}
         <div className="comunidade-direita">
           <div className="evento-wrapper">
             <h4 className="evento-titulo">Eventos da Comunidade</h4>

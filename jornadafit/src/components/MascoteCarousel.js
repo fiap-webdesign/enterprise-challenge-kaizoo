@@ -19,7 +19,12 @@ export default function MascoteCarousel({ mascotes }) {
 
   return (
     <div className="carousel-container">
-      <button className="carousel-button left" onClick={prevSlide}>
+      <button
+        className="carousel-button left"
+        onClick={prevSlide}
+        aria-label="Ver mascote anterior"
+        title="Anterior"
+      >
         &#10094;
       </button>
       <div className="carousel">
@@ -46,7 +51,12 @@ export default function MascoteCarousel({ mascotes }) {
           );
         })}
       </div>
-      <button className="carousel-button right" onClick={nextSlide}>
+      <button
+        className="carousel-button right"
+        onClick={nextSlide}
+        aria-label="Ver próximo mascote"
+        title="Próximo"
+      >
         &#10095;
       </button>
     </div>

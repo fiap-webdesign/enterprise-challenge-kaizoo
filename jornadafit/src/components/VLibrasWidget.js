@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 export default function VLibrasWidget() {
   useEffect(() => {
-    // Se já tiver o script carregado, não adiciona de novo
     if (document.getElementById("vlibras-script")) return;
 
     const script = document.createElement("script");

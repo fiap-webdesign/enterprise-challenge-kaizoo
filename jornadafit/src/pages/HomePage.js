@@ -27,7 +27,6 @@ export default function HomePage() {
   return (
     <Layout>
       <div className="home-grid">
-        {/* Coluna Esquerda */}
         <div className="left-panel">
           {usuario && <h2>Olá, {usuario.username}!</h2>}
 
@@ -51,7 +50,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Coluna Direita */}
         <div className="right-panel">
           <div className="card destaque-card">
             <strong>Destaque do Dia</strong>
@@ -73,15 +71,24 @@ export default function HomePage() {
             <strong>Minhas Atividades</strong>
             <div className="activity-icons">
               <div className="activity-badge">
-                <img src={personIcon} alt="Pessoa" />
+                <img
+                  src={personIcon}
+                  alt="Ícone de pessoa, representando treino funcional ou alongamento"
+                />
                 34min.
               </div>
               <div className="activity-badge">
-                <img src={walkIcon} alt="Andar" />
+                <img
+                  src={walkIcon}
+                  alt="Ícone de caminhada, representando atividade de andar"
+                />
                 1h30min.
               </div>
               <div className="activity-badge">
-                <img src={bikeIcon} alt="Bicicleta" />
+                <img
+                  src={bikeIcon}
+                  alt="Ícone de bicicleta, representando atividade de pedalada"
+                />
                 45min.
               </div>
             </div>
@@ -95,10 +102,10 @@ export default function HomePage() {
             <div className="card small-card">
               <strong>Amigos Ativos Hoje</strong>
               <div className="friends">
-                <img src={kaiaIcon} alt="Kaia" />
-                <img src={koaIcon} alt="Koa" />
-                <img src={dinoIcon} alt="Dino" />
-                <img src={pennyIcon} alt="Penny" />
+                <img src={kaiaIcon} alt="Avatar do mascote Kaia" />
+                <img src={koaIcon} alt="Avatar do mascote Koa" />
+                <img src={dinoIcon} alt="Avatar do mascote Dino" />
+                <img src={pennyIcon} alt="Avatar da mascote Penny" />
               </div>
             </div>
           </div>

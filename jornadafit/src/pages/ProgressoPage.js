@@ -31,9 +31,9 @@ export default function ProgressoPage() {
             <div className="badges">
               <h4>Badges</h4>
               <div className="badges-icons">
-                <img src={badge1} alt="Badge 1" />
-                <img src={badge2} alt="Badge 2" />
-                <img src={badge3} alt="Badge 3" />
+                <img src={badge1} alt="Insígnia Kaizoo 1" />
+                <img src={badge2} alt="Insígnia Kaizoo 2" />
+                <img src={badge3} alt="Insígnia Kaizoo 3" />
               </div>
             </div>
           </div>
@@ -67,16 +67,15 @@ export default function ProgressoPage() {
                 <strong>Metas da Semana</strong>
                 <div className="lista-metas">
                   <label className="checkbox-item">
-                    <input type="checkbox" />
-                    Se manter ativo por 5 dias
+                    <input type="checkbox" /> Se manter ativo por 5 dias
                   </label>
                   <label className="checkbox-item checked">
-                    <input type="checkbox" checked readOnly />
-                    Percorrer 7 km em uma semana
+                    <input type="checkbox" checked readOnly /> Percorrer 7 km em
+                    uma semana
                   </label>
                   <label className="checkbox-item checked">
-                    <input type="checkbox" checked readOnly />
-                    Correr por 3 min. seguidos
+                    <input type="checkbox" checked readOnly /> Correr por 3 min.
+                    seguidos
                   </label>
                 </div>
                 <div className="alerta alerta-metas">
@@ -110,16 +109,20 @@ export default function ProgressoPage() {
                   <h5>🏃‍♂️ Corrida Matinal</h5>
                   <p>
                     Correr 3km pela manhã!
-                    <br /> Recompensa: <b>45XP</b>
-                    <br /> Expira em: <b>4 dias</b>
+                    <br />
+                    Recompensa: <b>45XP</b>
+                    <br />
+                    Expira em: <b>4 dias</b>
                   </p>
                 </div>
                 <div className="desafio">
                   <h5>🚶‍♀️ Caminhada Noturna</h5>
                   <p>
                     Caminhar 2km após as 20h.
-                    <br /> Recompensa: <b>30XP</b>
-                    <br /> Expira em: <b>2 dias</b>
+                    <br />
+                    Recompensa: <b>30XP</b>
+                    <br />
+                    Expira em: <b>2 dias</b>
                   </p>
                 </div>
               </div>

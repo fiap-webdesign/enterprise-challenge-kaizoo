@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import mascotesFull from "../img/successMascots.png";
-import kaiaIcon from "../img/kaia.png";
-import tatoIcon from "../img/koa.png";
-import dinoIcon from "../img/dino.png";
-import pennyIcon from "../img/penny.png";
-import koaIcon from "../img/penny.png";
 import KaizooButton from "../components/KaizooButton";
 
 import kaiaBanner from "../img/kaiaWalkingBack.png";
@@ -22,7 +17,6 @@ import starPenny from "../img/StarPenny.png";
 import starKoa from "../img/StarKoa.png";
 
 import highlightTato from "../img/TatoListingBack.png";
-import highlightMiniAll from "../img/miniAll.png";
 import highlightTask from "../img/exemploDesafios.png";
 import highlightXP from "../img/xpStar.png";
 import highlightAll from "../img/allTogether.png";
@@ -39,14 +33,12 @@ export default function LandingPage() {
       <header className="landing-header">
         <span className="logo">Kaizoo</span>
         <div className="landing-buttons">
-          <div className="landing-buttons">
-            <KaizooButton to="/auth?modo=cadastro" type="highlight">
-              Criar Conta
-            </KaizooButton>
-            <KaizooButton to="/auth?modo=login" type="btn-outline">
-              Fazer Login
-            </KaizooButton>
-          </div>
+          <KaizooButton to="/auth?modo=cadastro" type="highlight">
+            Criar Conta
+          </KaizooButton>
+          <KaizooButton to="/auth?modo=login" type="btn-outline">
+            Fazer Login
+          </KaizooButton>
         </div>
       </header>
 
@@ -61,11 +53,20 @@ export default function LandingPage() {
           <button className="btn-kaizoo-dark">Escolher meu Kaizoo</button>
         </Link>
         <div className="hero-mascotes">
-          <img src={kaiaBanner} alt="Kaia" />
-          <img src={tatoBanner} alt="Tato" />
-          <img src={dinoBanner} alt="Penny" />
-          <img src={pennyBanner} alt="Dino" />
-          <img src={koaBanner} alt="Koa" />
+          <img src={kaiaBanner} alt="Kaia correndo na beira de um lago" />
+          <img src={tatoBanner} alt="Tato sorrindo na praia com estetoscópio" />
+          <img
+            src={dinoBanner}
+            alt="Dino segurando halteres na floresta, pronto para treino"
+          />
+          <img
+            src={pennyBanner}
+            alt="Penny meditando sobre uma geleira com montanhas ao fundo"
+          />
+          <img
+            src={koaBanner}
+            alt="Koa segurando seu filhote em meio a uma floresta de bambus"
+          />
         </div>
       </section>
 
@@ -111,7 +112,10 @@ export default function LandingPage() {
                   acompanhar na sua jornada de exercícios físicos.
                 </p>
               </div>
-              <img src={highlightTato} alt="Mascote" />
+              <img
+                src={highlightTato}
+                alt="Mascote Tato sorrindo na praia com estetoscópio"
+              />
             </div>
           </div>
 
@@ -124,7 +128,10 @@ export default function LandingPage() {
                   pouquinho a cada dia, conseguiremos ter grandes conquistas!
                 </p>
               </div>
-              <img src={highlightTask} alt="Checklist" />
+              <img
+                src={highlightTask}
+                alt="Exemplo de checklist de desafios diários do Kaizoo"
+              />
             </div>
           </div>
 
@@ -138,8 +145,10 @@ export default function LandingPage() {
                   diversão.
                 </p>
               </div>
-
-              <img src={highlightXP} alt="Gamificação" />
+              <img
+                src={highlightXP}
+                alt="Barra de progresso de XP com medalha e estrelas, representando evolução"
+              />
             </div>
           </div>
 
@@ -150,10 +159,12 @@ export default function LandingPage() {
                 <p>
                   A comunidade é um espaço seguro e motivador, onde cada
                   conquista é celebrada e cada passo é incentivado.
-                </p>{" "}
+                </p>
               </div>
-
-              <img src={highlightAll} alt="Comunidade" />
+              <img
+                src={highlightAll}
+                alt="Todos os mascotes Kaizoo juntos sorrindo e prontos para se exercitar"
+              />
             </div>
           </div>
         </div>
@@ -163,23 +174,38 @@ export default function LandingPage() {
         <h2>Principais Funcionalidades</h2>
         <div className="funcionalidades-grid">
           <div className="func-card">
-            <img src={iconMais} alt="Registro de Atividades" />
+            <img
+              src={iconMais}
+              alt="Ícone de adicionar atividade, representado por um sinal de mais"
+            />
             <p>REGISTRO DE ATIVIDADES FÍSICAS</p>
           </div>
           <div className="func-card">
-            <img src={iconReaction} alt="Evolução dos Mascotes" />
+            <img
+              src={iconReaction}
+              alt="Ícone de reação, simbolizando evolução dos mascotes"
+            />
             <p>EVOLUÇÃO DOS MASCOTES</p>
           </div>
           <div className="func-card">
-            <img src={iconMetricas} alt="Métricas" />
+            <img
+              src={iconMetricas}
+              alt="Ícone de gráfico de barras, representando métricas de evolução pessoal"
+            />
             <p>MÉTRICAS DE EVOLUÇÃO PESSOAL</p>
           </div>
           <div className="func-card">
-            <img src={iconTrofeu} alt="Troféus" />
+            <img
+              src={iconTrofeu}
+              alt="Ícone de troféu dourado, representando conquistas e prêmios"
+            />
             <p>TROFÉUS E CONQUISTAS</p>
           </div>
           <div className="func-card">
-            <img src={iconStar} alt="Ranking" />
+            <img
+              src={iconStar}
+              alt="Ícone de estrela, usado para rankings e destaques"
+            />
             <p>RANKING ENTRE AMIGOS</p>
           </div>
         </div>
@@ -190,7 +216,10 @@ export default function LandingPage() {
         <div className="mascote-cards">
           <div className="mascote-card">
             <div className="pet-badge">
-              <img src={starKaia} alt="Kaia" />
+              <img
+                src={starKaia}
+                alt="Insígnia do mascote Kaia, gata energética em moldura azul"
+              />
             </div>
             <strong>KAIA</strong>
             <p className="subtitle">A GATA ENERGÉTICA</p>
@@ -201,7 +230,10 @@ export default function LandingPage() {
           </div>
           <div className="mascote-card">
             <div className="pet-badge">
-              <img src={starTato} alt="Tato" />
+              <img
+                src={starTato}
+                alt="Insígnia do mascote Tato, tartaruga focada em moldura rosa"
+              />
             </div>
             <strong>TATO</strong>
             <p className="subtitle">TARTARUGA FOCADA</p>
@@ -212,7 +244,10 @@ export default function LandingPage() {
           </div>
           <div className="mascote-card">
             <div className="pet-badge">
-              <img src={starDino} alt="Dino" />
+              <img
+                src={starDino}
+                alt="Insígnia do mascote Dino, dinossaurinho forte em moldura laranja"
+              />
             </div>
             <strong>DINO</strong>
             <p className="subtitle">O DINOSSAURO FORTE</p>
@@ -223,7 +258,10 @@ export default function LandingPage() {
           </div>
           <div className="mascote-card">
             <div className="pet-badge">
-              <img src={starPenny} alt="Penny" />
+              <img
+                src={starPenny}
+                alt="Insígnia da mascote Penny, pinguim serena em moldura rosa claro"
+              />
             </div>
             <strong>PENNY</strong>
             <p className="subtitle">A PINGUIM SERENA</p>
@@ -234,7 +272,10 @@ export default function LandingPage() {
           </div>
           <div className="mascote-card">
             <div className="pet-badge">
-              <img src={starKoa} alt="Koa" />
+              <img
+                src={starKoa}
+                alt="Insígnia do mascote Koa, coalinha protetora em moldura verde água"
+              />
             </div>
             <strong>KOA</strong>
             <p className="subtitle">A COALINHA PROTETORA</p>
@@ -248,7 +289,11 @@ export default function LandingPage() {
 
       <section className="cta-final">
         <div className="cta-content">
-          <img src={mascotesFull} alt="Todos os mascotes" className="cta-img" />
+          <img
+            src={mascotesFull}
+            alt="Todos os mascotes Kaizoo reunidos, sorrindo e celebrando juntos"
+            className="cta-img"
+          />
 
           <div className="cta-text">
             <h2>

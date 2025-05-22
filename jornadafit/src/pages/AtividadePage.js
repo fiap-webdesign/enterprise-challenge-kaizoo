@@ -69,7 +69,7 @@ export default function AtividadePage() {
           <div className="card-final">
             <img
               src={successMascots}
-              alt="Mascotes"
+              alt="Todos os mascotes do Kaizoo juntos sorrindo e celebrando"
               style={{ maxWidth: "300px" }}
             />
             <h2>
@@ -133,7 +133,19 @@ export default function AtividadePage() {
                       >
                         <img
                           src={icones[atv]}
-                          alt={atv}
+                          alt={
+                            atv === "Alongamento"
+                              ? "Ícone de pessoa representando alongamento"
+                              : atv === "Yoga"
+                              ? "Ícone de pessoa representando prática de yoga"
+                              : atv === "Caminhada"
+                              ? "Ícone de pessoa caminhando, representando atividade de caminhada"
+                              : atv === "Corrida"
+                              ? "Ícone de pessoa caminhando, representando atividade de corrida"
+                              : atv === "Pedalada"
+                              ? "Ícone de bicicleta, representando atividade de pedalada"
+                              : "Ícone de pessoa representando uma atividade personalizada"
+                          }
                           className="atividade-icon"
                         />
                         {atv}
@@ -223,7 +235,7 @@ export default function AtividadePage() {
                           >
                             <img
                               src={amigo.avatar}
-                              alt={amigo.nome}
+                              alt={`Avatar do mascote ${amigo.nome}`}
                               className="sugestao-avatar"
                             />
                             {amigo.nome}
@@ -246,7 +258,7 @@ export default function AtividadePage() {
                           <img
                             key={amigo.id}
                             src={amigo.avatar}
-                            alt={amigo.nome}
+                            alt={`Avatar do mascote ${amigo.nome}`}
                             style={{
                               width: "32px",
                               height: "32px",
@@ -289,7 +301,6 @@ export default function AtividadePage() {
             </div>
           </div>
 
-          {/* Coluna direita com KaizooCard */}
           <div className="atividade-direita">
             {mascote && (
               <KaizooCard

@@ -181,7 +181,7 @@ export default function MascotesPage() {
                                   <div className="back">
                                     <img
                                       src={m.back}
-                                      alt={`Personalidade de ${m.nome}`}
+                                      alt={`Descrição da personalidade do mascote ${m.nome}`}
                                     />
                                   </div>
                                 </div>
@@ -284,7 +284,7 @@ export default function MascotesPage() {
                   <div className="tela-final-container">
                     <img
                       src={mascotesJuntos}
-                      alt="Kaizoos juntos"
+                      alt="Imagem dos mascotes Kaizoo juntos celebrando"
                       className="tela-final-img"
                     />
                     <h2 className="tela-final-title">Tudo pronto!</h2>

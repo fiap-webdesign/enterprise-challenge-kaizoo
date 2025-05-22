@@ -44,7 +44,7 @@ export default function ConfiguracoesPage() {
     if (confirmar) {
       localStorage.removeItem("usuario");
       localStorage.removeItem("kaizoo");
-      navigate("/"); // redireciona usando React Router
+      navigate("/");
     }
   };
 
