@@ -20,7 +20,11 @@ export default function FeedCard({
     <div className="feed-card">
       <div className="feed-header-post">
         <div className="feed-user-block">
-          <img src={avatar} alt={nome} className="feed-avatar" />
+          <img
+            src={avatar}
+            alt={`Foto de perfil de ${nome}`}
+            className="feed-avatar"
+          />
           <div className="feed-user-info">
             <span className="feed-user">{nome}</span>
             <small className="tempo">{tempo}</small>
@@ -29,7 +33,11 @@ export default function FeedCard({
         <div className="feed-xp-badge">{xp} XP</div>
       </div>
 
-      <img src={banner} alt="Banner de atividade" className="feed-img" />
+      <img
+        src={banner}
+        alt={`Imagem da atividade de ${nome}: ${atividade}`}
+        className="feed-img"
+      />
 
       <p className="feed-texto">{texto}</p>
 

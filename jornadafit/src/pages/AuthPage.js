@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AuthPage.css";
 import mascotesImg from "../img/successMascots.png";
 import Header from "../components/Header";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function AuthPage() {
   const [modo, setModo] = useState("cadastro");
@@ -171,7 +170,10 @@ export default function AuthPage() {
               <br />
               <strong>Bem vindo!</strong>
             </h2>
-            <img src={mascotesImg} alt="Mascotes" />
+            <img
+              src={mascotesImg}
+              alt="Todos os mascotes do Kaizoo reunidos, sorrindo e celebrando juntos"
+            />
           </div>
         </div>
       </div>

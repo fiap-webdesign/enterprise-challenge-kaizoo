@@ -10,6 +10,7 @@ export default function MascoteFlipCard({ frontImage, backImage, alt }) {
         <div
           className="flip-card-front"
           style={{ backgroundImage: `url(${frontImage})` }}
+          aria-label={alt}
         >
           <button className="flip-btn" onClick={() => setFlipped(true)}>
             VER PERSONALIDADE
